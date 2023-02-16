@@ -41,7 +41,11 @@ function App() {
           Call API
         </button>
       ) : (
-        <a href="https://kite.zerodha.com/connect/login?api_key=l5jgi9wzwsfuc6ip&v=3">
+        <a
+          href={`https://kite.zerodha.com/connect/login?api_key=${
+            import.meta.env.VITE_APP_KITE_API_KEY
+          }&v=3`}
+        >
           Login to Kite
         </a>
       )}

@@ -16,6 +16,7 @@ app.post("/access", async (req, res) => {
     api_key: process.env.API_KEY,
   });
   let user = {};
+  kc.getOrders();
   kc.generateSession(token, process.env.API_SECRET)
     .then((res) => {
       console.log(res);
